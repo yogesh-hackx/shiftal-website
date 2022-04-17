@@ -1061,6 +1061,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-blue-sf{
+  --tw-text-opacity: 1;
+  color: rgb(48 194 239 / var(--tw-text-opacity));
+}
+
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1100,6 +1105,11 @@ body {
 }
 
 #market_table_wrapper table.dataTable thead th, table.dataTable thead td {
+  background-color: #F4F4F4 !important;
+  border-bottom: none !important;
+}
+
+table.dataTable thead th, table.dataTable thead td {
   background-color: #F4F4F4 !important;
   border-bottom: none !important;
 }
@@ -1159,6 +1169,10 @@ table.dataTable.no-footer {
   width:150px !important;
   height:48px !important;
   margin: auto;
+}
+
+#market_table table.dataTable tbody th, table.dataTable tbody td[colspan="5"] {
+  padding: 20px 10px !important;
 }
 
 .purple-gradient {
@@ -1242,6 +1256,10 @@ table.dataTable.no-footer {
 
   .md\:block{
     display: block;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-40{
