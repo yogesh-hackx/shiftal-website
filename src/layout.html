@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="h-20 px-5 relative flex items-center justify-between border-b-2 border-gray-100 text-sm overflow-visible">
+        <div class="nav-logo cursor-pointer">
+            <img src="/assets/shiftalLogo.png" class="h-10 w-fit" alt="logo">
+        </div>
+
+        <!-- Nav Menu (middle) -->
+        <ul class="lg:flex gap-8 hidden">
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">Buy Crypto</a></li>
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">Markets</a></li>
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">Trade</a></li>
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">Derivatives</a></li>
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">Earn</a></li>
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">Finance</a></li>
+            <li class="cursor-pointer whitespace-nowrap"><a href="#">NFT</a></li>
+        </ul>
+
+        <!-- Nav Items (right) -->
+        <div class="gap-7 items-center lg:flex hidden">
+            <a href="/login" class="whitespace-nowrap">Log In</a>
+            <a href="/register">
+                <button class="px-6 py-2 rounded-lg bg-blue-sf text-white">Register</button>
+            </a>
+            <div class="flex ">
+                <p class="border-r-2 border-black px-2">USD</p>
+                <p class="px-2">ENG</p>
+            </div>
+            <img src="/assets/downloadIcon.svg" alt="">
+        </div>
+
+        <div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-gray-800 p-3">
+				<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Mobile menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+				</svg>
+			</button>
+		</div>
+
+        <div class="navbar-menu absolute z-50 hidden">
+            <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-5 px-5 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                        <div class="nav-logo cursor-pointer">
+                            <img src="/assets/shiftalLogo.png" class="h-10" alt="logo">
+                        </div>
+                    </a>
+                    <button class="navbar-close">
+                        <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <ul>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Buy Crypto</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Markets</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Trade</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Derivatives</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Earn</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Finance</a>
+                        </li>
+                        <li class="mb-1">
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">NFT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-auto mb-4">
+                    <div class="pt-6">
+                        <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl" href="/login">Log In</a>
+                        <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-sf hover:bg-blue-400  rounded-xl" href="/register ">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- 🚀 Main Section -->
+    <main>
+
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/DatTables/datatables.min.css"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Shiftal</title>
+  </head>
+
+  <body>
+    <nav
+      class="h-20 px-5 relative flex items-center justify-between border-b-2 border-gray-100 text-sm overflow-visible"
+    >
+      <div class="nav-logo cursor-pointer">
+        <img src="/assets/shiftalLogo.png" class="h-10 w-fit" alt="logo" />
+      </div>
+
+      <!-- Nav Menu (middle) -->
+      <ul class="lg:flex gap-8 hidden">
+        <li class="cursor-pointer whitespace-nowrap">
+          <a href="#" class="flex items-center gap-1">Buy Crypto <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
+        </li>
+        <li class="cursor-pointer whitespace-nowrap">
+            <a href="#" class="flex items-center gap-1">Markets <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
+        </li>
+        <li class="cursor-pointer whitespace-nowrap"><a href="#" class="flex items-center gap-1">Trade <img src="/assets/caret-down.svg" class="w-3" alt=""></a></li>
+        <li class="cursor-pointer whitespace-nowrap">
+            <a href="#" class="flex items-center gap-1">Derivatives <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
+        </li>
+        <li class="cursor-pointer whitespace-nowrap"><a href="#" class="flex items-center gap-1">Earn <img src="/assets/caret-down.svg" class="w-3" alt=""></a></li>
+        <li class="cursor-pointer whitespace-nowrap">
+            <a href="#" class="flex items-center gap-1">Finance <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
+        </li>
+        <li class="cursor-pointer whitespace-nowrap"><a href="#">NFT</a></li>
+      </ul>
+
+      <!-- Nav Items (right) -->
+      <div class="gap-7 items-center lg:flex hidden">
+        <a href="/login" class="whitespace-nowrap">Log In</a>
+        <a href="/register">
+          <button class="px-6 py-2 rounded-lg bg-blue-sf text-white">
+            Register
+          </button>
+        </a>
+        <ul class="flex">
+          <li class="border-r-2 border-black px-2"><a href="#">USD</a></li>
+          <li class="px-2"><a href="#">ENG</a></li>
+        </ul>
+        <a href="#">
+            <img src="/assets/downloadIcon.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-gray-800 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="navbar-menu absolute z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-5 px-5 bg-white border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">
+              <div class="nav-logo cursor-pointer">
+                <img src="/assets/shiftalLogo.png" class="h-10" alt="logo" />
+              </div>
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Buy Crypto</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Markets</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Trade</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Derivatives</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Earn</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Finance</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >NFT</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto mb-4">
+            <div class="pt-6">
+              <a
+                class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl"
+                href="/login"
+                >Log In</a
+              >
+              <a
+                class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-sf hover:bg-blue-400 rounded-xl"
+                href="/register "
+                >Register</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- 🚀 Main Section -->
+    <main>
+      <section
+        class="hero-section relative max-w-6xl overflow-hidden md:overflow-visible m-auto px-4 grid grid-cols-1 md:grid-cols-2 mt-12 md:mt-0 justify-between items-center"
+      >
+        <header class="col-span-1 max-w-lg m-auto md:m-0 bg-white/60">
+          <h1
+            class="text-center md:text-left text-3xl md:text-4.5xl md:leading-2.9 font-bold"
+          >
+            Buy and sell 100+ cryptocurrencies with 20+ flat currencies
+          </h1>
+          <div
+            class="email-input mt-8 relative w-full flex items-center border-2 bg-slate-100 rounded-xl pr-1"
+          >
+            <input
+              type="text"
+              class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100"
+              placeholder="Email/Phone Number"
+            />
+            <button
+              class="get-started text-center flex items-center text-sm bg-blue-700 text-white px-4 py-3 md:py-4 whitespace-nowrap rounded-xl"
+            >
+              Get Started
+            </button>
+          </div>
+        </header>
+        <div class="col-span-1">
+          <img
+            src="/assets/hero-banner2x.png"
+            class="mt-6 md:mt-0 w-heroImgSm ml-47pc md:ml-0 -translate-x-1/2 md:translate-x-0 md:-left-8 lg:w-heroImg max-w-none relative lg:-left-28 lg:top-9"
+            alt=""
+          />
+        </div>
+
+        <!-- particles background -->
+        <img
+          src="/assets/part-lt.svg"
+          class="absolute -z-10 top-0 -left-10"
+          alt=""
+        />
+        <img
+          src="/assets/part-lb.svg"
+          class="absolute -z-10 bottom-0 -left-10"
+          alt=""
+        />
+        <img
+          src="/assets/part-rt.svg"
+          class="absolute -z-10 top-0 -right-10"
+          alt=""
+        />
+        <img
+          src="/assets/part-mb.svg"
+          class="absolute -z-10 bottom-0 left-1/2"
+          alt=""
+        />
+      </section>
+
+      <!-- Banner Cards Section -->
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 px-4 lg:grid-cols-4 gap-4 max-w-6xl m-auto"
+      >
+        <a href="#">
+          <img
+            src="/assets/bannerCard1.png"
+            class="rounded-lg w-full md:h-40 object-cover object-left"
+            alt="Shiftal Verse"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="/assets/bannerCard2.png"
+            class="rounded-lg w-full md:h-40 object-cover object-left"
+            alt="More Rewards"
+          />
+        </a>
+        <a href="#"
+          ><img
+            src="/assets/bannerCard3.png"
+            class="rounded-lg w-full md:h-40 object-cover"
+            alt="Shiftal Coin"
+        /></a>
+        <a href="#"
+          ><img
+            src="/assets/bannerCard4.png"
+            class="rounded-lg w-full md:h-40 object-cover object-left"
+            alt="Shiftal Academia"
+        /></a>
+      </section>
+
+      <!-- Market Section -->
+      <section class="market-section max-w-6xl m-auto mt-16 px-4">
+        <h1 class="text-center text-3xl font-bold mb-6">Market</h1>
+        <table id="market_table" class="display">
+          <thead>
+            <tr>
+              <th class="whitespace-nowrap">Name</th>
+              <th class="whitespace-nowrap">Last Price</th>
+              <th class="whitespace-nowrap">24 H Change</th>
+              <th class="whitespace-nowrap">Markets</th>
+              <th class="whitespace-nowrap">Markets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-btc flex items-center justify-center"
+                  >
+                    <img src="/assets/iconBTC.svg" class="h-6" alt="BTC" />
+                  </div>
+                  <div class="whitespace-nowrap">
+                    <span class="font-medium">BITCOIN</span>
+                    <span class="text-gray-400">BTC</span>
+                  </div>
+                </div>
+              </td>
+              <td class="font-medium">$497.05</td>
+              <td class="font-medium text-green-500">2.25%</td>
+              <td class="font-bold">
+                <canvas id="btc_chart" width="" height="36"></canvas>
+              </td>
+              <td class="font-bold text-red-500">
+                <button
+                  class="bg-slate-700 hover:bg-slate-800 hover:shadow-sm text-white rounded-full px-6 py-2"
+                >
+                  Trade
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-blue-700 flex items-center justify-center"
+                  >
+                    <img src="/assets/iconETH.svg" class="h-6" alt="BTC" />
+                  </div>
+                  <div class="whitespace-nowrap">
+                    <span class="font-medium">ETHEREUM</span>
+                    <span class="text-gray-400">ETH</span>
+                  </div>
+                </div>
+              </td>
+              <td class="font-medium">$4165.02</td>
+              <td class="font-medium text-green-500">2.03%</td>
+              <td class="font-bold">
+                <canvas id="eth_chart" width="" height="36"></canvas>
+              </td>
+              <td class="font-bold text-red-500">
+                <button
+                  class="bg-slate-700 hover:bg-slate-800 hover:shadow-sm text-white rounded-full px-6 py-2"
+                >
+                  Trade
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-red-700 flex items-center justify-center"
+                  >
+                    <img src="/assets/iconCHZ.svg" class="h-6" alt="BTC" />
+                  </div>
+                  <div class="whitespace-nowrap">
+                    <span class="font-medium">CHILLIZ</span>
+                    <span class="text-gray-400">CHZ</span>
+                  </div>
+                </div>
+              </td>
+              <td class="font-medium">$0.328867</td>
+              <td class="font-medium text-green-500">5.38%</td>
+              <td class="font-bold">
+                <canvas id="chz_chart" width="" height="36"></canvas>
+              </td>
+              <td class="font-bold text-red-500">
+                <button
+                  class="bg-slate-700 hover:bg-slate-800 hover:shadow-sm text-white rounded-full px-6 py-2"
+                >
+                  Trade
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center"
+                  >
+                    <img src="/assets/iconFIL.svg" class="h-6" alt="BTC" />
+                  </div>
+                  <div class="whitespace-nowrap">
+                    <span class="font-medium">FILECOIN</span>
+                    <span class="text-gray-400">FIL</span>
+                  </div>
+                </div>
+              </td>
+              <td class="font-medium">$66.52</td>
+              <td class="font-medium text-green-500">6.13%</td>
+              <td class="font-bold">
+                <canvas id="fil_chart" width="" height="36"></canvas>
+              </td>
+              <td class="font-bold text-red-500">
+                <button
+                  class="bg-slate-700 hover:bg-slate-800 hover:shadow-sm text-white rounded-full px-6 py-2"
+                >
+                  Trade
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-slate-200 flex items-center justify-center"
+                  >
+                    <img src="/assets/iconADA.svg" class="h-6" alt="ADA" />
+                  </div>
+                  <div class="whitespace-nowrap">
+                    <span class="font-medium">CARDANO</span>
+                    <span class="text-gray-400">ADA</span>
+                  </div>
+                </div>
+              </td>
+              <td class="font-medium">$2.26</td>
+              <td class="font-medium text-green-500">7.91%</td>
+              <td class="font-bold">
+                <canvas id="ada_chart" width="" height="36"></canvas>
+              </td>
+              <td class="font-bold text-red-500">
+                <button
+                  class="bg-slate-700 hover:bg-slate-800 hover:shadow-sm text-white rounded-full px-6 py-2"
+                >
+                  Trade
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="max-w-6xl m-auto mt-16 px-4">
+        <h1 class="text-center text-3xl font-bold mb-6 max-w-md m-auto">
+          Here are a few reasons why you should trade with us
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-4 mt-12">
+          <div
+            class="flex flex-col gap-3 items-center text-center md:items-start md:text-left"
+          >
+            <img src="/assets/reasonIntegrated.svg" class="w-24" alt="" />
+            <h2 class="text-lg font-semibold">Integrated Platform</h2>
+            <p class="text-base text-gray-500">
+              We are always trusted, the service and quality of our various
+              features can be relied on and guaranteed.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center text-center md:items-start md:text-left"
+          >
+            <img
+              src="/assets/reasonTutorial.svg"
+              class="w-24"
+              alt="Tutorial Video"
+            />
+            <h2 class="text-lg font-semibold">Tutorial Video</h2>
+            <p class="text-base text-gray-500">
+              Here you can learn crypto assets easily, there are many tutorials
+              for you to learn while investing.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center text-center md:items-start md:text-left"
+          >
+            <img src="/assets/reasonIntegrated.svg" class="w-24" alt="" />
+            <h2 class="text-lg font-semibold">Guaranteed Safety</h2>
+            <p class="text-base text-gray-500">
+              We are always trusted, the service and quality of our various
+              features can be relied on and guaranteed.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center text-center md:items-start md:text-left"
+          >
+            <img src="/assets/reasonIntegrated.svg" class="w-24" alt="" />
+            <h2 class="text-lg font-semibold">Integrated Platform</h2>
+            <p class="text-base text-gray-500">
+              We are always trusted, the service and quality of our various
+              features can be relied on and guaranteed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="max-w-6xl m-auto mt-16 md:mt-60 flex flex-col gap-6 purple-gradient text-white md:rounded-lg p-9 relative"
+      >
+        <h1 class="font-semibold w-56 text-2xl">Trade Anywhere & Anytime</h1>
+        <p class="max-w-md">
+          Get started with the most easiest and secure platform to buy, sell,
+          trade and earn cryptocurrencies.
+        </p>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl">
+          <a href="#">
+              <div class="flex items-center gap-4">
+                <img src="/assets/glassApple.svg" class="w-14" alt="App Store" />
+                <div class="font-semibold text-lg">App Store</div>
+              </div>
+          </a>
+          <a href="#">
+              <div class="flex items-center gap-4">
+                <img
+                  src="/assets/glassAndroid.svg"
+                  class="w-14"
+                  alt="Android APK"
+                />
+                <div class="font-semibold text-lg">Android APK</div>
+              </div>
+          </a>
+          <a href="#">
+              <div class="flex items-center gap-4">
+                <img src="/assets/glassWin.svg" class="w-14" alt="Windows" />
+                <div class="font-semibold text-lg">Windows</div>
+              </div>
+          </a>
+
+          <a href="#">
+              <div class="flex items-center gap-4">
+                <img
+                  src="/assets/glassYoutube.svg"
+                  class="w-14"
+                  alt="Google Play"
+                />
+                <div class="font-semibold text-lg">Google Play</div>
+              </div>
+          </a>
+
+          <a href="#">
+              <div class="flex items-center gap-4">
+                <img src="/assets/glassMac.svg" class="w-14" alt="MacOS" />
+                <div class="font-semibold text-lg">MacOS</div>
+              </div>
+          </a>
+        </div>
+        <img
+          src="/assets/mockup2x.png"
+          class="absolute right-4 -top-13rem hidden md:block"
+          alt=""
+        />
+      </section>
+    </main>
+
+    <footer class="max-w-6xl m-auto px-4 py-14 text-center sm:text-left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
+        <div class="col-span-1 flex flex-col gap-6 items-center sm:items-start">
+            <img src="/assets/shiftalLogo2x.png" class="w-44" alt="">
+            <a href="/register">
+                <button class="px-9 py-4 bg-blue-800 text-white whitespace-nowrap rounded-lg w-full max-w-xs">Register Now</button>
+            </a>
+            <a href="/login">
+                <button class="px-9 py-4 bg-blue-sf text-white whitespace-nowrap rounded-lg w-full max-w-xs">Login Now</button>
+            </a>
+        </div>
+
+        <section class="col-span-1 flex flex-col gap-2">
+            <h1 class="font-semibold">About Us</h1>
+            <ul class="flex flex-col gap-4 mt-4">
+                <a href="#">
+                    <li>About</li>
+                </a>
+                <a href="#">
+                    <li>Careers</li>
+                </a>
+                <a href="#">
+                    <li>Business Contacts</li>
+                </a>
+                <a href="#">
+                    <li>Community</li>
+                </a>
+                <a href="#">
+                    <li>Blog</li>
+                </a>
+                <a href="#">
+                    <li>Terms</li>
+                </a>
+                <a href="#">
+                    <li>Privacy</li>
+                </a>
+                <a href="#">
+                    <li>News</li>
+                </a>
+            </ul>
+        </section>
+
+        <section class="col-span-1 flex flex-col gap-2">
+            <h1 class="font-semibold">Service</h1>
+            <ul class="flex flex-col gap-4 mt-4">
+                <a href="#">
+                    <li>Exchange</li>
+                </a>
+                <a href="#">
+                    <li>Academy</li>
+                </a>
+                <a href="#">
+                    <li>Charity</li>
+                </a>
+                <a href="#">
+                    <li>Labs</li>
+                </a>
+                <a href="#">
+                    <li>Research</li>
+                </a>
+                <a href="#">
+                    <li>Trust Wallet</li>
+                </a>
+            </ul>
+        </section>
+        
+        <section class="col-span-1 flex flex-col gap-2">
+            <h1 class="font-semibold">Support</h1>
+            <ul class="flex flex-col gap-4 mt-4">
+                <a href="#">
+                    <li>Give us feedback</li>
+                </a>
+                <a href="#">
+                    <li>Support Center</li>
+                </a>
+                <a href="#">
+                    <li>Submit a request</li>
+                </a>
+                <a href="#">
+                    <li>API Documentation</li>
+                </a>
+            </ul>
+        </section>
+        
+        <section class="col-span-1 flex flex-col gap-2 items-center sm:items-start">
+            <h1 class="font-semibold">Community</h1>
+            <ul class="flex gap-8 mt-4">
+                <a href="#">
+                    <li><img src="/assets/social-fb.svg" alt=""></li>
+                </a>
+                <a href="#">
+                    <li><img src="/assets/social-insta.svg" alt=""></li>
+                </a>
+                <a href="#">
+                    <li><img src="/assets/social-twitter.svg" alt=""></li>
+                </a>
+            </ul>
+        </section>
+
+    </footer>
+    <script src="/DatTables/datatables.min.js"></script>
+    <script src="/chartjs/chart.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

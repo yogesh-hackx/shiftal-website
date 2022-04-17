@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#market_table {
+    width: 100% !important;
+}
+.market-section .dataTables_length {
+    display: none;
+}
+.market-section #market_table_filter {
+    display: none;
+}
+.market-section .dataTables_info {
+    display: none;
+}
+.market-section .dataTables_paginate {
+    display: none;
+}
+#market_table_wrapper table.dataTable thead th, table.dataTable thead td {
+    background-color: #F4F4F4 !important;
+    border-bottom: none !important;
+}
+table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+    border: none !important;
+}
+table.dataTable thead th, table.dataTable thead td {
+    color: #6D6C79 !important;
+}
+table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+    background-color: inherit !important;
+}
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color: inherit !important;
+}
+table.dataTable.stripe tbody tr.even, table.dataTable.display tbody tr.even {
+    background-color: inherit !important;
+}
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: inherit !important;
+}
+table.dataTable {
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+table.dataTable.no-footer {
+    border-bottom: 1px solid #E3E3E3 !important;
+}
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: 1px solid #E3E3E3 !important;
+    border-radius: 8px;
+}
+#market_table_wrapper table.dataTable thead th, table.dataTable thead td {
+    border-bottom: none !important;
+}
+#market_table tr td {
+    text-align: center;
+}
+#market_table tr td div {
+    /* justify-content: center; */
+}
+#market_table canvas {
+    width:150px !important;
+    height:48px !important;
+    margin: auto;
+}
+.purple-gradient {
+    background: transparent linear-gradient(116deg, #2E34A7 0%, #8288EF 100%) 0% 0% no-repeat padding-box;
+}
+.purple-gradient-td {
+    background: transparent linear-gradient(150deg, #2E34A7 0%, #8288EF 100%) 0% 0% no-repeat padding-box;
+}
