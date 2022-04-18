@@ -5,38 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Login | Shiftal</title>
 </head>
 <body>
     <nav
-      class="h-20 px-5 fixed top-0 bg-white w-full z-50 flex items-center justify-between border-b-2 border-gray-100 text-sm overflow-visible"
+      class="h-20 px-5 absolute top-0 w-full flex items-center justify-between text-sm overflow-visible"
     >
       <div class="nav-logo cursor-pointer">
-        <img src="/assets/shiftalLogo.png" class="h-10 w-fit" alt="logo" />
+        <img src="/assets/shiftalLogoWhite.png" class="h-10 w-fit" alt="logo" />
       </div>
-
-      <!-- Nav Menu (middle) -->
-      <ul class="lg:flex gap-8 hidden">
-        <li class="cursor-pointer whitespace-nowrap">
-          <a href="#" class="flex items-center gap-1">Buy Crypto <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
-        </li>
-        <li class="cursor-pointer whitespace-nowrap">
-            <a href="#" class="flex items-center gap-1">Markets <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
-        </li>
-        <li class="cursor-pointer whitespace-nowrap"><a href="#" class="flex items-center gap-1">Trade <img src="/assets/caret-down.svg" class="w-3" alt=""></a></li>
-        <li class="cursor-pointer whitespace-nowrap">
-            <a href="#" class="flex items-center gap-1">Derivatives <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
-        </li>
-        <li class="cursor-pointer whitespace-nowrap"><a href="#" class="flex items-center gap-1">Earn <img src="/assets/caret-down.svg" class="w-3" alt=""></a></li>
-        <li class="cursor-pointer whitespace-nowrap">
-            <a href="#" class="flex items-center gap-1">Finance <img src="/assets/caret-down.svg" class="w-3" alt=""></a>
-        </li>
-        <li class="cursor-pointer whitespace-nowrap"><a href="#">NFT</a></li>
-      </ul>
 
       <!-- Nav Items (right) -->
       <div class="gap-7 items-center lg:flex hidden">
-        <a href="/login" class="whitespace-nowrap">Log In</a>
+        <a href="/login" class="whitespace-nowrap">Haven’t registered?</a>
         <a href="/register">
           <button class="px-6 py-2 rounded-lg bg-blue-sf text-white">
             Register
@@ -72,7 +53,7 @@
           <div class="flex items-center mb-8">
             <a class="mr-auto text-3xl font-bold leading-none" href="#">
               <div class="nav-logo cursor-pointer">
-                <img src="/assets/shiftalLogo.png" class="h-10" alt="logo" />
+                <img src="/assets/shiftalLogoWhite.png" class="h-10" alt="logo" />
               </div>
             </a>
             <button class="navbar-close">
@@ -164,8 +145,49 @@
     </nav>
 
     <!-- 🚀 Main Section -->
-    <main>
+    <main class="">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="pt-20 purple-gradient-td min-h-screen hidden md:block">
+                <section class="max-w-lg m-auto text-white px-4">
+                    <h1 class="font-semibold text-4xl mt-8">Trade Anywhere & Anytime</h1>
+                    <p class="mt-5 text-base">Get started with the most easiest and secure platform to buy, sell, trade and earn cryptocurrencies.</p>
+                    <img
+                        src="/assets/hero-banner2x.png"
+                        class="mt-6 w-heroImgSm lg:w-heroImg ml-47pc -translate-x-1/2 max-w-none relative "
+                        alt=""
+                    />
+                </section>
+            </div>
 
+            <!-- login form -->
+            <div class="pt-20">
+                <section class="m-auto min-h-screen max-w-md md:max-w-none px-4 md:px-8 lg:px-24">
+                    <h1 class="font-bold text-4xl mt-8">Login</h1>
+                    <div class="flex gap-4 mt-10">
+                        <button class="bg-slate-900 text-white px-4 py-2 rounded-lg">Email</button>
+                        <button class="bg-slate-200 px-4 py-2 rounded-lg">Phone</button>
+                        <button class="bg-slate-200 px-4 py-2 rounded-lg">QR code</button>
+                    </div>
+
+                    <form class="mt-7 flex flex-col gap-5">
+                        <input
+                            type="email"
+                            class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100 border border-gray-300"
+                            placeholder="Email/Phone Number"
+                            />
+                        <input
+                            type="password"
+                            class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100 border border-gray-300"
+                            placeholder="Password"
+                            />
+                            <button class="bg-blue-800 text-white px-9 py-4 rounded-lg hover:bg-blue-700 hover:shadow-sm">Log In</button>
+                            <a href="#" class="text-blue-sf self-end">Forgot Password?</a>
+                    </form>
+                    
+                </section>
+            </div>
+
+        </div>
     </main>
 
     <footer class="max-w-6xl m-auto px-4 py-14 text-center sm:text-left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12">
@@ -174,8 +196,8 @@
             <a href="/register" class="w-full">
                 <button class="px-9 py-4 bg-blue-800 text-white whitespace-nowrap rounded-lg w-full max-w-xs">Register Now</button>
             </a>
-            <a href="/login" class="w-full">
-                <button class="px-9 py-4 bg-blue-sf text-white whitespace-nowrap rounded-lg w-full max-w-xs">Login Now</button>
+            <a href="#" class="w-full">
+                <button class="px-9 py-4 bg-blue-sf text-white whitespace-nowrap rounded-lg w-full max-w-xs">Trade Now</button>
             </a>
         </div>
 

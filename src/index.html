@@ -16,7 +16,7 @@
 
   <body>
     <nav
-      class="h-20 px-5 relative flex items-center justify-between border-b-2 border-gray-100 text-sm overflow-visible"
+      class="h-20 px-5 fixed top-0 bg-white w-full z-50 flex items-center justify-between border-b-2 border-gray-100 text-sm overflow-visible"
     >
       <div class="nav-logo cursor-pointer">
         <img src="/assets/shiftalLogo.png" class="h-10 w-fit" alt="logo" />
@@ -171,13 +171,13 @@
     </nav>
 
     <!-- 🚀 Main Section -->
-    <main>
+    <main class="mt-20">
       <section
         class="hero-section relative max-w-6xl overflow-hidden md:overflow-visible m-auto px-4 grid grid-cols-1 md:grid-cols-2 mt-12 md:mt-0 justify-between items-center"
       >
         <header class="col-span-1 max-w-lg m-auto md:m-0 bg-white/60">
           <h1
-            class="text-center md:text-left text-3xl md:text-4.5xl md:leading-2.9 font-bold"
+            class="text-center md:text-left text-3xl md:text-4.5xl md:leading-2.9 font-bold mt-16 md:mt-0"
           >
             Buy and sell 100+ cryptocurrencies with 20+ flat currencies
           </h1>
@@ -186,7 +186,7 @@
           >
             <input
               type="text"
-              class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100"
+              class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100 border border-none"
               placeholder="Email/Phone Number"
             />
             <button
@@ -408,7 +408,7 @@
                 </button>
               </td>
             </tr>
-            <tr>
+            <tr class="datatable-nosort">
                 <td colspan="5" class="py-5"><a href="#" class="text-blue-sf">View More Markets ></a></td>
                 <td class="hidden"></td>
                 <td class="hidden"></td>

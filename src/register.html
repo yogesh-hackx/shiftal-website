@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Login | Shiftal</title>
+  </head>
+  <body>
+    <nav
+      class="h-20 px-5 absolute top-0 w-full flex items-center justify-between text-sm overflow-visible"
+    >
+      <div class="nav-logo cursor-pointer">
+        <img
+                  src="/assets/shiftalLogoWhite.png"
+                  class="h-10 hidden md:block"
+                  alt="logo"
+                />
+                <img
+                  src="/assets/shiftalLogo.png"
+                  class="h-10 md:hidden"
+                  alt="logo"
+                />
+      </div>
+
+      <!-- Nav Items (right) -->
+      <div class="gap-7 items-center lg:flex hidden">
+        <a href="/login" class="whitespace-nowrap">Already have an account?</a>
+        <a href="/register">
+          <button class="px-6 py-2 rounded-lg bg-blue-sf text-white">
+            Login
+          </button>
+        </a>
+        <ul class="flex">
+          <li class="border-r-2 border-black px-2"><a href="#">USD</a></li>
+          <li class="px-2"><a href="#">ENG</a></li>
+        </ul>
+        <a href="#">
+          <img src="/assets/downloadIcon.svg" alt="" />
+        </a>
+      </div>
+
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-gray-800 p-3">
+          <svg
+            class="block h-4 w-4 fill-current"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="navbar-menu absolute z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav
+          class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-5 px-5 bg-white border-r overflow-y-auto"
+        >
+          <div class="flex items-center mb-8">
+            <a class="mr-auto text-3xl font-bold leading-none" href="#">
+              <div class="nav-logo cursor-pointer">
+                <img
+                  src="/assets/shiftalLogoWhite.png"
+                  class="h-10 hidden lg:block"
+                  alt="logo"
+                />
+                <img
+                  src="/assets/shiftalLogo.png"
+                  class="h-10 md:hidden"
+                  alt="logo"
+                />
+              </div>
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Buy Crypto</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Markets</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Trade</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Derivatives</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Earn</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >Finance</a
+                >
+              </li>
+              <li class="mb-1">
+                <a
+                  class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                  href="#"
+                  >NFT</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto mb-4">
+            <div class="pt-6">
+              <a
+                class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold bg-gray-50 hover:bg-gray-100 rounded-xl"
+                href="/login"
+                >Log In</a
+              >
+              <a
+                class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-sf hover:bg-blue-400 rounded-xl"
+                href="/register "
+                >Register</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- 🚀 Main Section -->
+    <main class="">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="pt-20 purple-gradient-td min-h-screen hidden md:block">
+          <section class="max-w-lg m-auto text-white px-4">
+            <h1 class="font-semibold text-4xl mt-8">
+              Trade Anywhere & Anytime
+            </h1>
+            <p class="mt-5 text-base">
+              Get started with the most easiest and secure platform to buy,
+              sell, trade and earn cryptocurrencies.
+            </p>
+            <img
+              src="/assets/hero-banner2x.png"
+              class="mt-6 w-heroImgSm lg:w-heroImg ml-47pc -translate-x-1/2 max-w-none relative"
+              alt=""
+            />
+          </section>
+        </div>
+
+        <!-- Register form -->
+        <div class="pt-20">
+          <section
+            class="m-auto min-h-screen max-w-md md:max-w-none px-4 md:px-8 lg:px-24"
+          >
+            <h1 class="font-bold text-4xl mt-8">Register</h1>
+            <div class="flex gap-4 mt-10">
+              <button class="bg-slate-900 text-white px-4 py-2 rounded-lg">
+                Email
+              </button>
+              <button class="bg-slate-200 px-4 py-2 rounded-lg">Phone</button>
+            </div>
+
+            <form class="mt-2 flex flex-col gap-5">
+              <div
+                class="email-input mt-8 relative w-full flex items-center border-2 bg-slate-100 rounded-xl pr-1"
+              >
+                <input
+                  type="text"
+                  class="text-sm p-4 md:p-5 w-full h-full outline-none border border-none rounded-xl bg-slate-100"
+                  placeholder="Email/Phone Number"
+                />
+                <button
+                  class="get-started text-center flex items-center text-sm bg-blue-800 text-white px-4 py-3 md:py-4 whitespace-nowrap rounded-xl"
+                >
+                  Send Code
+                </button>
+              </div>
+              <input
+                type="text"
+                class="text-sm p-4 md:p-5 w-full h-full outline-none border border-gray-300 rounded-xl bg-slate-100"
+                placeholder="Email Verification Code"
+              />
+              <input
+              type="password"
+              class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100 border border-gray-300"
+              placeholder="Set Login Password"
+              />
+              <input
+                type="text"
+                class="text-sm p-4 md:p-5 w-full h-full outline-none rounded-xl bg-slate-100 border border-gray-300"
+                placeholder="Referral Code (Optional)"
+              />
+              <button
+                class="bg-blue-800 text-white px-9 py-4 rounded-lg hover:bg-blue-700 hover:shadow-sm"
+              >
+                Register
+              </button>
+              <label class="inline-flex items-center mt-3">
+                <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-sf outline-none border-none rounded-sm" checked><span class="ml-2 text-gray-700">I have read and agree to the Terms of Use</span>
+              </label>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="max-w-6xl m-auto px-4 py-14 text-center sm:text-left grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12"
+    >
+      <div class="col-span-1 flex flex-col gap-6 items-center sm:items-start">
+        <img src="/assets/shiftalLogo2x.png" class="w-44" alt="" />
+        <a href="/register" class="w-full">
+          <button
+            class="px-9 py-4 bg-blue-800 text-white whitespace-nowrap rounded-lg w-full max-w-xs"
+          >
+            Register Now
+          </button>
+        </a>
+        <a href="#" class="w-full">
+          <button
+            class="px-9 py-4 bg-blue-sf text-white whitespace-nowrap rounded-lg w-full max-w-xs"
+          >
+            Trade Now
+          </button>
+        </a>
+      </div>
+
+      <section class="col-span-1 flex flex-col gap-2">
+        <h1 class="font-semibold">About Us</h1>
+        <ul class="flex flex-col gap-4 mt-4">
+          <a href="#">
+            <li>About</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Business Contacts</li>
+          </a>
+          <a href="#">
+            <li>Community</li>
+          </a>
+          <a href="#">
+            <li>Blog</li>
+          </a>
+          <a href="#">
+            <li>Terms</li>
+          </a>
+          <a href="#">
+            <li>Privacy</li>
+          </a>
+          <a href="#">
+            <li>News</li>
+          </a>
+        </ul>
+      </section>
+
+      <section class="col-span-1 flex flex-col gap-2">
+        <h1 class="font-semibold">Service</h1>
+        <ul class="flex flex-col gap-4 mt-4">
+          <a href="#">
+            <li>Exchange</li>
+          </a>
+          <a href="#">
+            <li>Academy</li>
+          </a>
+          <a href="#">
+            <li>Charity</li>
+          </a>
+          <a href="#">
+            <li>Labs</li>
+          </a>
+          <a href="#">
+            <li>Research</li>
+          </a>
+          <a href="#">
+            <li>Trust Wallet</li>
+          </a>
+        </ul>
+      </section>
+
+      <section class="col-span-1 flex flex-col gap-2">
+        <h1 class="font-semibold">Support</h1>
+        <ul class="flex flex-col gap-4 mt-4">
+          <a href="#">
+            <li>Give us feedback</li>
+          </a>
+          <a href="#">
+            <li>Support Center</li>
+          </a>
+          <a href="#">
+            <li>Submit a request</li>
+          </a>
+          <a href="#">
+            <li>API Documentation</li>
+          </a>
+        </ul>
+      </section>
+
+      <section
+        class="col-span-1 flex flex-col gap-2 items-center sm:items-start"
+      >
+        <h1 class="font-semibold">Community</h1>
+        <ul class="flex gap-8 mt-4">
+          <a href="#">
+            <li><img src="/assets/social-fb.svg" alt="" /></li>
+          </a>
+          <a href="#">
+            <li><img src="/assets/social-insta.svg" alt="" /></li>
+          </a>
+          <a href="#">
+            <li><img src="/assets/social-twitter.svg" alt="" /></li>
+          </a>
+        </ul>
+      </section>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
